@@ -18,6 +18,8 @@ RUN apk update && \
 	pip3 install --no-cache-dir edgegrid-python && \
 	pip3 install httpie-edgegrid
 
+RUN apk add jq
+
 RUN mkdir /root/.httpie
 COPY httpie_config.json /root/.httpie/config.json
 
